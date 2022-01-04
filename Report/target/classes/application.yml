@@ -1,0 +1,35 @@
+server:
+    port: 8080
+spring:
+    application:
+        name: Report
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        name: defaultDataSource
+        password: '123456'
+        url: jdbc:mysql://47.115.201.171:3306/test?serverTimezone=UTC
+        username: 'root'
+    ### jwt
+    jwt:
+        ###过期时间 单位s
+        time: 1800
+        ###安全密钥
+        secret: demo
+        ###token前缀
+        prefix: "Bearer "
+        ###http头key
+        header: Authorization
+
+# ====================MybatisPlus====================
+mybatis-plus:
+    #  mapper-locations:复杂的操作可能需要自己写SQL，SQL可以写到xml文件中，这里指定和Dao对应的xml文件，此时我们需要在resources中创建一个mapper目录
+    mapper-locations: mapper/*.xml
+    #  type-aliases-package:指定JavaBean的别名包，和MyBatis用法一样
+    type-aliases-package: com.*.entity
+    configuration:
+        #    map-underscore-to-camel-case:开启驼峰功能，数据库表列名如果有_，可以自动按驼峰命名规则转换
+        map-underscore-to-camel-case: true
+        #    log-impl:日志开启，方便测试
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
