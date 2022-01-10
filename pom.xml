@@ -26,8 +26,30 @@
         <spring-boot-starter-web.version>2.5.6</spring-boot-starter-web.version>
         <redisson.version>3.16.5</redisson.version>
         <jjwt.version>0.6.0</jjwt.version>
+        <dynamic-datasource-spring-boot-starter.version>3.3.2</dynamic-datasource-spring-boot-starter.version>
+        <ojdbc6.version>11.2.0.1.0</ojdbc6.version>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>${dynamic-datasource-spring-boot-starter.version}</version>
+        </dependency>
+
+        <!--Druid连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+
+        <!-- oracle驱动依赖 -->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>${ojdbc6.version}</version>
+        </dependency>
         <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
