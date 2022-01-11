@@ -17,7 +17,7 @@ import java.io.Serializable;
 @Data
 @TableName(value = "`test1`")
 public class test1 implements Serializable {
-    @TableId(value = "id", type = IdType.INPUT)
+    @TableId(value = "siteid", type = IdType.INPUT)
     Integer siteid;
     @TableField(value = "citycode")
     Integer citycode;
